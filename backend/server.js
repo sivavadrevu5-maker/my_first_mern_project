@@ -9,7 +9,7 @@ const app=express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/auth_demo')
+mongoose.connect('mongodb://mongodb:27017')
 .then(()=>console.log("DB connected"))
 .catch(err=>console.log(err));
 
