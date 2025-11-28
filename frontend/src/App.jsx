@@ -1,3 +1,4 @@
+import React from "react";
 
 import { useState } from 'react';
 
@@ -11,7 +12,7 @@ export default function App(){
  const submit=async(e)=>{
   e.preventDefault();
   const url= mode==='login' ? '/api/login' : '/api/register';
-  const res=await fetch('http://localhost:5000'+url,{
+  const res=await fetch('http://13.236.201.162:5000'+url,{
     method:'POST',
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify({name,email,password})
